@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomProgressBar">
+        <attr name="my_progress" format = "integer"/>
+        <attr name="my_progress_color" format = "color"/>
+        <attr name="my_progress_bg_color" format = "color"/>
+    </declare-styleable>
+</resources>
