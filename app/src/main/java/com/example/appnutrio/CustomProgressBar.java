@@ -8,6 +8,8 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.View;
 
 import androidx.annotation.Nullable;
@@ -40,6 +42,7 @@ public class CustomProgressBar extends View {
        typedArray.recycle();
     }
 
+
     public void setValue(int progressBarValue) {
         this.progressBarValue = progressBarValue;
         invalidate();
@@ -49,7 +52,11 @@ public class CustomProgressBar extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        DisplayMetrics metrics = getResources().getDisplayMetrics();
+        float stroke = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, this.stroke,metrics);
+
         backgroundArc.set(stroke, stroke, getWidth() - stroke, getHeight() - stroke);
+
         bgPaint.setColor(progressBarBgColor);
         bgPaint.setStyle(Paint.Style.STROKE);
         bgPaint.setStrokeWidth(40.0f);
@@ -57,7 +64,7 @@ public class CustomProgressBar extends View {
         canvas.drawArc(backgroundArc, 0.0f, 360.0f, false, bgPaint);
 
         paint.setColor(progressBarColor);
-        paint.setStrokeWidth(stroke);
+        paint.setStrokeWidth(stroke - 40.0f);
         paint.setDither(true);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeCap(Paint.Cap.ROUND);

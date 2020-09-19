@@ -4,20 +4,238 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#182630"
     tools:context=".MainActivity">
 
-  <com.example.appnutrio.CustomProgressBar
-      android:layout_width="0dp"
-      android:layout_height="0dp"
-      app:my_progress="75"
-      app:my_progress_bg_color="#111B2a"
-      app:my_progress_color="#0ff"
-      app:layout_constraintDimensionRatio="1:1"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name" />
+
+    <com.example.appnutrio.CustomProgressBar
+        android:id="@+id/progress1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:my_progress="75"
+        app:my_progress_bg_color="#111B2a"
+        app:my_progress_color="#0ff" />
+
+    <com.example.appnutrio.CustomProgressBar
+        android:id="@+id/progress2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:my_progress="100"
+        app:my_progress_bg_color="#111B2a"
+        app:my_progress_color="#ff0" />
+
+    <com.example.appnutrio.CustomProgressBar
+        android:id="@+id/progress3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:my_progress="100"
+        app:my_progress_bg_color="#111B2a"
+        app:my_progress_color="#f0f" />
+
+    <TextView
+        android:id="@+id/titleCarbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/carboidrato"
+        android:textColor="#FBC02D"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintTop_toBottomOf="@id/cardView" />
 
 
+    <TextView
+        android:id="@+id/textCarbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/carboidrato"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/titleCarbo"
+        app:layout_constraintStart_toStartOf="@id/titleCarbo"
+        app:layout_constraintTop_toBottomOf="@id/titleCarbo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:background="@android:color/transparent"
+        app:cardCornerRadius="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cardView2"
+        app:layout_constraintTop_toTopOf="@id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff0"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imagemCar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_baseline_fastfood_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/titleCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/calorias"
+        android:textColor="#FBC02D"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cardView2"
+        app:layout_constraintStart_toStartOf="@id/cardView2"
+        app:layout_constraintTop_toBottomOf="@id/cardView2" />
+
+
+    <TextView
+        android:id="@+id/textCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/calorias"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/titleCal"
+        app:layout_constraintStart_toStartOf="@id/titleCal"
+        app:layout_constraintTop_toBottomOf="@id/titleCal" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="80dp"
+        android:background="@android:color/transparent"
+        app:cardCornerRadius="36dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#f00"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_baseline_cake_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/titlepro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/calorias"
+        android:textColor="#FBC02D"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/cardView3"
+        app:layout_constraintStart_toStartOf="@id/cardView3"
+        app:layout_constraintTop_toBottomOf="@id/cardView3" />
+
+
+    <TextView
+        android:id="@+id/textPro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/calorias"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/titlepro"
+        app:layout_constraintStart_toStartOf="@id/titlepro"
+        app:layout_constraintTop_toBottomOf="@id/titlepro" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
+        app:cardCornerRadius="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_orange_dark"
+            android:gravity="center"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_baseline_restaurant_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">App Nutrição</string>
+    <string name="carboidrato">carboidrato</string>
+    <string name="calorias">calorias</string>
 </resources>
