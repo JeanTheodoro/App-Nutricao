@@ -59,7 +59,7 @@ public class CustomProgressBar extends View {
 
         bgPaint.setColor(progressBarBgColor);
         bgPaint.setStyle(Paint.Style.STROKE);
-        bgPaint.setStrokeWidth(40.0f);
+        bgPaint.setStrokeWidth(60.0f);
         bgPaint.setAntiAlias(true);
         canvas.drawArc(backgroundArc, 0.0f, 360.0f, false, bgPaint);
 

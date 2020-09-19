@@ -54,7 +54,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:my_progress="100"
+        app:my_progress="70"
         app:my_progress_bg_color="#111B2a"
         app:my_progress_color="#f0f" />
 
@@ -101,7 +101,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ff0"
+            android:background="@drawable/gradient_1"
             android:gravity="center"
             android:padding="8dp">
 
@@ -163,7 +163,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#f00"
+            android:background="@drawable/gradient_2"
             android:gravity="center"
             android:padding="8dp">
 
@@ -186,7 +186,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/calorias"
+        android:text="@string/proteina"
         android:textColor="#FBC02D"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/cardView3"
@@ -200,7 +200,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:text="@string/calorias"
+        android:text="@string/proteina"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@id/titlepro"
@@ -221,7 +221,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/holo_orange_dark"
+            android:background="@drawable/gradient_3"
             android:gravity="center"
             android:padding="8dp">
 

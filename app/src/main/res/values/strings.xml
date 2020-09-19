@@ -2,4 +2,6 @@
     <string name="app_name">App Nutrição</string>
     <string name="carboidrato">carboidrato</string>
     <string name="calorias">calorias</string>
+    <string name="proteina">proteina</string>
+    <string name="refresh">Refresh</string>
 </resources>
